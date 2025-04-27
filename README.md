@@ -42,30 +42,10 @@ Also ready for import into Neo4j.
 
 The graph can be explored visually using Neo4j Bloom or custom Cypher queries.
 
-## Getting Started
-
-Clone the repository
-
-git clone https://github.com/your-username/polygraph.git
-cd polygraph
-
-Install dependencies
-pip install -r requirements.txt
-
-Run the notebook
-
-Generate concept embeddings
-
-Build the concept graph
-
-Export it to JSON
-
-(Optional) Upload into a local or cloud Neo4j instance
-
-Visualize and Explore
-
 ## Contributing
+
 Polygraph is meant to grow.
+
 Feel free to:
 Add more papers and ideas to papers.json
 Improve embedding strategies
