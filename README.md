@@ -1,4 +1,4 @@
-## Polygraph: A P vs NP Discovery Engine
+# Polygraph: A P vs NP Discovery Engine
 
 Polygraph is a research discovery engine designed to explore and map the vast landscape of ideas surrounding the legendary P vs NP problem.
 
@@ -77,11 +77,11 @@ Please fork the repo and open a Pull Request with your changes.
 Top 5 Most Connected Papers
 The current Top 5 most connected papers (based on the concept graph) will be updated periodically in the repository discussions and comments.
 
-##License
+## License
 Open for research and educational use.
 Feel free to fork, build upon, and contribute back!
 
-##Acknowledgements
+## Acknowledgements
 Thanks to the AI Quotient community and everyone pushing the boundary of human-AI collaboration.
 
 Final Thought
