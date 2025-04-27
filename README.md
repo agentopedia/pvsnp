@@ -16,29 +16,29 @@ Built through a collaboration between human curiosity and proactive AI assistanc
 
 This is not just a project. It's an experiment in how human-AI teams can co-create new research workflows.
 
-#How it Works
+# How it Works
 
-###Paper Collection:
+### Paper Collection:
 
 Papers were sourced across a wide timeline and different perspectives on P vs NP.
 
 Metadata and abstracts are stored in papers.json.
 
-###Embedding Generation:
+### Embedding Generation:
 
 Using Sentence Transformers to generate vector embeddings for each paper's abstract.
 
-###Similarity Graph Construction:
+### Similarity Graph Construction:
 
 Concepts are connected if their embeddings are similar beyond a threshold (default 0.7).
 
-###Graph Export:
+### Graph Export:
 
 The graph is saved as polygraph.json (nodes and edges format).
 
 Also ready for import into Neo4j.
 
-###Neo4j Visualization:
+### Neo4j Visualization:
 
 The graph can be explored visually using Neo4j Bloom or custom Cypher queries.
 
