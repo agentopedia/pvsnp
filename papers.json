@@ -1,0 +1,121 @@
+[
+  {
+    "concept": "P versus NP Problem - Official Clay Millennium Problem Description",
+    "paper_url": "https://www.claymath.org/millennium-problems/p-vs-np-problem",
+    "authors": ["Stephen Cook"],
+    "abstract": "The P vs NP problem asks whether every problem whose solution can be quickly verified can also be quickly solved. It was first presented by Stephen Cook in 1971 in his seminal paper 'The Complexity of Theorem-Proving Procedures'. This problem remains unresolved and is one of the seven Millennium Prize Problems.",
+    "tags": ["foundational", "complexity theory"]
+  },
+  {
+    "concept": "The Complexity of Theorem-Proving Procedures",
+    "paper_url": "https://www.cs.toronto.edu/~sacook/homepage/1971.pdf",
+    "authors": ["Stephen Cook"],
+    "abstract": "Introduces the concept of NP-completeness and establishes SAT as NP-complete. Provides the foundational link between search problems and computational complexity.",
+    "tags": ["foundational", "NP-completeness"]
+  },
+  {
+    "concept": "NP-complete Problems and Physical Reality",
+    "paper_url": "https://arxiv.org/abs/quant-ph/0204157",
+    "authors": ["Scott Aaronson"],
+    "abstract": "Examines how NP-complete problems might relate to physical processes, such as quantum mechanics and statistical physics. Argues that NP-completeness likely transcends specific models of computation.",
+    "tags": ["cross-domain", "quantum computing", "complexity theory"]
+  },
+  {
+    "concept": "Relativization and the P=NP Question",
+    "paper_url": "https://eccc.weizmann.ac.il/report/1994/011/",
+    "authors": ["Andrée C. Yao"],
+    "abstract": "Discusses the concept of relativization, showing that both P=NP and P≠NP can be true relative to different oracles, implying that new techniques beyond relativization are needed.",
+    "tags": ["relativization", "complexity barriers"]
+  },
+  {
+    "concept": "Natural Proofs",
+    "paper_url": "https://people.eecs.berkeley.edu/~luca/cs278-01/natural-proofs.pdf",
+    "authors": ["Alexander Razborov", "Steven Rudich"],
+    "abstract": "Defines 'natural proofs' and shows that a broad class of proof techniques are unlikely to resolve P vs NP if strong pseudorandom generators exist. Introduces a major barrier to traditional techniques.",
+    "tags": ["natural proofs", "complexity barriers"]
+  },
+  {
+    "concept": "Algebrization: A New Barrier in Complexity Theory",
+    "paper_url": "https://people.csail.mit.edu/rrw/algebrization.pdf",
+    "authors": ["Scott Aaronson", "Avi Wigderson"],
+    "abstract": "Introduces 'algebrization', a generalization of relativization, and shows that it too cannot settle P vs NP. Suggests that radically new techniques are required.",
+    "tags": ["algebrization", "complexity barriers"]
+  },
+  {
+    "concept": "Geometric Complexity Theory: An Overview",
+    "paper_url": "https://arxiv.org/abs/0906.1831",
+    "authors": ["Ketan Mulmuley", "Milind Sohoni"],
+    "abstract": "Proposes using algebraic geometry and representation theory to attack complexity problems like P vs NP. Introduces the GCT program, leveraging deep mathematics beyond traditional combinatorial methods.",
+    "tags": ["geometric complexity", "representation theory", "GCT"]
+  },
+  {
+    "concept": "Proof Complexity and the P vs NP Problem",
+    "paper_url": "https://arxiv.org/abs/1801.05206",
+    "authors": ["Pavel Pudlak"],
+    "abstract": "Reviews how proof complexity can contribute to resolving P vs NP. Focuses on lower bounds for proof systems and their implications for circuit lower bounds.",
+    "tags": ["proof complexity", "lower bounds"]
+  },
+  {
+    "concept": "SAT Solvers: Theory and Practice",
+    "paper_url": "https://sat2011.cs.helsinki.fi/eduschool/material/marques-silva.pdf",
+    "authors": ["Joao Marques-Silva"],
+    "abstract": "Explains advances in SAT solvers and how practical solving often outpaces worst-case complexity predictions. Discusses implications for understanding NP-completeness in practice.",
+    "tags": ["SAT", "practical complexity"]
+  },
+  {
+    "concept": "Quantum Supremacy and the Complexity of Random Circuit Sampling",
+    "paper_url": "https://arxiv.org/abs/1608.00263",
+    "authors": ["Sergio Boixo", "Sergey V. Isakov", "Vadim N. Smelyanskiy", "et al."],
+    "abstract": "Proposes random circuit sampling as a method to demonstrate quantum computational supremacy. Discusses connections to complexity-theoretic hardness assumptions.",
+    "tags": ["quantum computing", "randomness", "complexity"]
+  },
+  {
+    "concept": "Statistical Mechanics of Optimization Problems",
+    "paper_url": "https://arxiv.org/abs/cond-mat/9912223",
+    "authors": ["Marc Mézard", "Riccardo Zecchina"],
+    "abstract": "Applies methods from statistical mechanics to analyze the structure of NP-hard optimization problems, particularly satisfiability problems.",
+    "tags": ["cross-domain", "statistical mechanics", "optimization"]
+  },
+  {
+    "concept": "Hardness Amplification and Derandomization",
+    "paper_url": "https://www.cs.princeton.edu/~ranraz/publications/AmplificationDerandomization.pdf",
+    "authors": ["Ran Raz"],
+    "abstract": "Explores how hardness amplification techniques relate to derandomization and implications for circuit complexity.",
+    "tags": ["hardness amplification", "derandomization"]
+  },
+  {
+    "concept": "P, NP, and the Polynomial Hierarchy",
+    "paper_url": "https://www.cs.cmu.edu/~odonnell/hierarchy.pdf",
+    "authors": ["Ryan O'Donnell"],
+    "abstract": "Provides an approachable introduction to the polynomial hierarchy and how it relates to P vs NP.",
+    "tags": ["complexity theory", "polynomial hierarchy"]
+  },
+  {
+    "concept": "On Problems as Hard as SAT",
+    "paper_url": "https://people.eecs.berkeley.edu/~luca/cs278-01/satsurveys.pdf",
+    "authors": ["Russell Impagliazzo"],
+    "abstract": "Discusses problems that are provably as hard as SAT under various reductions, and implications for average-case complexity.",
+    "tags": ["SAT", "average-case hardness"]
+  },
+  {
+    "concept": "Satisfiability Threshold Conjecture: Recent Progress",
+    "paper_url": "https://arxiv.org/abs/1801.07582",
+    "authors": ["Will Perkins"],
+    "abstract": "Reviews recent work on the satisfiability threshold conjecture for random k-SAT formulas and its links to phase transitions in computational hardness.",
+    "tags": ["SAT", "phase transitions", "statistical physics"]
+  },
+  {
+    "concept": "Survey on Lower Bounds in Proof Complexity",
+    "paper_url": "https://arxiv.org/abs/1701.03438",
+    "authors": ["Susanna F. de Rezende"],
+    "abstract": "Surveys known lower bounds in proof complexity and discusses their relevance to major complexity-theoretic questions.",
+    "tags": ["proof complexity", "lower bounds"]
+  },
+  {
+    "concept": "Learning Hard Functions",
+    "paper_url": "https://arxiv.org/abs/1703.00884",
+    "authors": ["Boaz Barak", "Shafi Goldwasser"],
+    "abstract": "Investigates hardness assumptions from the perspective of learnability and pseudo-randomness, with implications for P vs NP.",
+    "tags": ["machine learning", "hardness", "pseudo-randomness"]
+  }
+]
