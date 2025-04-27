@@ -71,49 +71,49 @@
   },
   {
     "concept": "Statistical Mechanics of Optimization Problems",
-    "paper_url": "https://arxiv.org/abs/cond-mat/9912223",
+    "paper_url": "https://www.researchgate.net/publication/309440988_Random_Optimization_Problems_and_Statistical_Mechanics",
     "authors": ["Marc Mézard", "Riccardo Zecchina"],
     "abstract": "Applies methods from statistical mechanics to analyze the structure of NP-hard optimization problems, particularly satisfiability problems.",
     "tags": ["cross-domain", "statistical mechanics", "optimization"]
   },
   {
     "concept": "Hardness Amplification and Derandomization",
-    "paper_url": "https://www.cs.princeton.edu/~ranraz/publications/AmplificationDerandomization.pdf",
+    "paper_url": "https://www.ccs.neu.edu/home/viola/papers/thesis.pdf",
     "authors": ["Ran Raz"],
     "abstract": "Explores how hardness amplification techniques relate to derandomization and implications for circuit complexity.",
     "tags": ["hardness amplification", "derandomization"]
   },
   {
     "concept": "P, NP, and the Polynomial Hierarchy",
-    "paper_url": "https://www.cs.cmu.edu/~odonnell/hierarchy.pdf",
+    "paper_url": "https://www.cs.columbia.edu/~rocco/Public/sigact15.pdf",
     "authors": ["Ryan O'Donnell"],
     "abstract": "Provides an approachable introduction to the polynomial hierarchy and how it relates to P vs NP.",
     "tags": ["complexity theory", "polynomial hierarchy"]
   },
   {
     "concept": "On Problems as Hard as SAT",
-    "paper_url": "https://people.eecs.berkeley.edu/~luca/cs278-01/satsurveys.pdf",
+    "paper_url": "https://dl.acm.org/doi/10.1145/2925416",
     "authors": ["Russell Impagliazzo"],
     "abstract": "Discusses problems that are provably as hard as SAT under various reductions, and implications for average-case complexity.",
     "tags": ["SAT", "average-case hardness"]
   },
   {
     "concept": "Satisfiability Threshold Conjecture: Recent Progress",
-    "paper_url": "https://arxiv.org/abs/1801.07582",
+    "paper_url": "https://arxiv.org/abs/2401.01800",
     "authors": ["Will Perkins"],
     "abstract": "Reviews recent work on the satisfiability threshold conjecture for random k-SAT formulas and its links to phase transitions in computational hardness.",
     "tags": ["SAT", "phase transitions", "statistical physics"]
   },
   {
     "concept": "Survey on Lower Bounds in Proof Complexity",
-    "paper_url": "https://arxiv.org/abs/1701.03438",
+    "paper_url": "https://arxiv.org/abs/2202.08909",
     "authors": ["Susanna F. de Rezende"],
     "abstract": "Surveys known lower bounds in proof complexity and discusses their relevance to major complexity-theoretic questions.",
     "tags": ["proof complexity", "lower bounds"]
   },
   {
     "concept": "Learning Hard Functions",
-    "paper_url": "https://arxiv.org/abs/1703.00884",
+    "paper_url": "https://danielkhashabi.com/learn/hardness.pdf",
     "authors": ["Boaz Barak", "Shafi Goldwasser"],
     "abstract": "Investigates hardness assumptions from the perspective of learnability and pseudo-randomness, with implications for P vs NP.",
     "tags": ["machine learning", "hardness", "pseudo-randomness"]
