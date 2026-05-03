@@ -1,0 +1,624 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "node_type": "concept",
+      "layer": "core",
+      "display": "P vs NP Problem",
+      "paper_count": 14,
+      "id": "P_vs_NP"
+    },
+    {
+      "node_type": "concept",
+      "layer": "core",
+      "display": "NP-completeness",
+      "paper_count": 18,
+      "id": "NP_completeness"
+    },
+    {
+      "node_type": "concept",
+      "layer": "core",
+      "display": "Boolean Satisfiability (SAT)",
+      "paper_count": 19,
+      "id": "SAT"
+    },
+    {
+      "node_type": "concept",
+      "layer": "core",
+      "display": "Circuit Complexity",
+      "paper_count": 17,
+      "id": "circuit_complexity"
+    },
+    {
+      "node_type": "concept",
+      "layer": "core",
+      "display": "Proof Complexity",
+      "paper_count": 11,
+      "id": "proof_complexity"
+    },
+    {
+      "node_type": "concept",
+      "layer": "core",
+      "display": "Natural Proofs Barrier",
+      "paper_count": 15,
+      "id": "natural_proofs"
+    },
+    {
+      "node_type": "concept",
+      "layer": "core",
+      "display": "Algebrization Barrier",
+      "paper_count": 7,
+      "id": "algebrization"
+    },
+    {
+      "node_type": "concept",
+      "layer": "core",
+      "display": "Relativization / Oracle Separations",
+      "paper_count": 8,
+      "id": "relativization"
+    },
+    {
+      "node_type": "concept",
+      "layer": "core",
+      "display": "Polynomial Hierarchy",
+      "paper_count": 17,
+      "id": "polynomial_hierarchy"
+    },
+    {
+      "node_type": "concept",
+      "layer": "adjacent",
+      "display": "Geometric Complexity Theory",
+      "paper_count": 17,
+      "id": "GCT"
+    },
+    {
+      "node_type": "concept",
+      "layer": "adjacent",
+      "display": "Permanent vs Determinant",
+      "paper_count": 8,
+      "id": "permanent_determinant"
+    },
+    {
+      "node_type": "concept",
+      "layer": "adjacent",
+      "display": "Algebraic Circuit Complexity",
+      "paper_count": 2,
+      "id": "algebraic_complexity"
+    },
+    {
+      "node_type": "concept",
+      "layer": "adjacent",
+      "display": "Interactive Proofs & PCPs",
+      "paper_count": 14,
+      "id": "interactive_proofs"
+    },
+    {
+      "node_type": "concept",
+      "layer": "adjacent",
+      "display": "Randomized Complexity & Derandomization",
+      "paper_count": 13,
+      "id": "randomized_complexity"
+    },
+    {
+      "node_type": "concept",
+      "layer": "adjacent",
+      "display": "Counting Complexity (#P)",
+      "paper_count": 7,
+      "id": "counting_complexity"
+    },
+    {
+      "node_type": "concept",
+      "layer": "proof",
+      "display": "Switching Lemma & Random Restrictions",
+      "paper_count": 7,
+      "id": "switching_lemma"
+    },
+    {
+      "node_type": "concept",
+      "layer": "proof",
+      "display": "Communication Complexity",
+      "paper_count": 6,
+      "id": "communication_complexity"
+    },
+    {
+      "node_type": "concept",
+      "layer": "proof",
+      "display": "Sunflower Lemma",
+      "paper_count": 0,
+      "id": "sunflower_lemma"
+    },
+    {
+      "node_type": "concept",
+      "layer": "proof",
+      "display": "Diagonalization & Hierarchy Theorems",
+      "paper_count": 0,
+      "id": "diagonalization"
+    },
+    {
+      "node_type": "concept",
+      "layer": "bridge",
+      "display": "Phase Transitions in CSPs",
+      "paper_count": 0,
+      "id": "phase_transitions"
+    },
+    {
+      "node_type": "concept",
+      "layer": "bridge",
+      "display": "Quantum Complexity",
+      "paper_count": 0,
+      "id": "quantum_complexity"
+    },
+    {
+      "node_type": "concept",
+      "layer": "bridge",
+      "display": "Cryptography & One-Way Functions",
+      "paper_count": 0,
+      "id": "cryptography"
+    },
+    {
+      "node_type": "concept",
+      "layer": "bridge",
+      "display": "Spin Glasses & Statistical Physics",
+      "paper_count": 0,
+      "id": "spin_glasses"
+    },
+    {
+      "node_type": "concept",
+      "layer": "bridge",
+      "display": "Finite Model Theory & Descriptive Complexity",
+      "paper_count": 0,
+      "id": "finite_model_theory"
+    },
+    {
+      "node_type": "concept",
+      "layer": "bridge",
+      "display": "Extremal Combinatorics",
+      "paper_count": 0,
+      "id": "combinatorics"
+    },
+    {
+      "node_type": "concept",
+      "layer": "bridge",
+      "display": "Game Theory & PPAD",
+      "paper_count": 0,
+      "id": "game_theory"
+    },
+    {
+      "node_type": "concept",
+      "layer": "bridge",
+      "display": "Hardness of Approximation",
+      "paper_count": 0,
+      "id": "hardness_approximation"
+    }
+  ],
+  "edges": [
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "P_vs_NP",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "P_vs_NP",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "P_vs_NP",
+      "target": "proof_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "NP_completeness",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "NP_completeness",
+      "target": "polynomial_hierarchy"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "SAT",
+      "target": "proof_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "SAT",
+      "target": "phase_transitions"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "circuit_complexity",
+      "target": "natural_proofs"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "circuit_complexity",
+      "target": "switching_lemma"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "circuit_complexity",
+      "target": "algebraic_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "proof_complexity",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "proof_complexity",
+      "target": "interactive_proofs"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "natural_proofs",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "natural_proofs",
+      "target": "algebrization"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "natural_proofs",
+      "target": "relativization"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "algebrization",
+      "target": "relativization"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "algebrization",
+      "target": "natural_proofs"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "algebrization",
+      "target": "interactive_proofs"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "relativization",
+      "target": "algebrization"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "relativization",
+      "target": "natural_proofs"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "relativization",
+      "target": "diagonalization"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "polynomial_hierarchy",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "polynomial_hierarchy",
+      "target": "counting_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "polynomial_hierarchy",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "GCT",
+      "target": "algebraic_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "GCT",
+      "target": "permanent_determinant"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "permanent_determinant",
+      "target": "GCT"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "permanent_determinant",
+      "target": "algebraic_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "permanent_determinant",
+      "target": "counting_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "algebraic_complexity",
+      "target": "GCT"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "algebraic_complexity",
+      "target": "permanent_determinant"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "interactive_proofs",
+      "target": "algebrization"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "interactive_proofs",
+      "target": "hardness_approximation"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "interactive_proofs",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "randomized_complexity",
+      "target": "natural_proofs"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "randomized_complexity",
+      "target": "cryptography"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "randomized_complexity",
+      "target": "polynomial_hierarchy"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "counting_complexity",
+      "target": "permanent_determinant"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "counting_complexity",
+      "target": "polynomial_hierarchy"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "counting_complexity",
+      "target": "phase_transitions"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "switching_lemma",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "switching_lemma",
+      "target": "sunflower_lemma"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "switching_lemma",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "communication_complexity",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "communication_complexity",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "sunflower_lemma",
+      "target": "switching_lemma"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "sunflower_lemma",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "sunflower_lemma",
+      "target": "combinatorics"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "diagonalization",
+      "target": "relativization"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "diagonalization",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "phase_transitions",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "phase_transitions",
+      "target": "spin_glasses"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "phase_transitions",
+      "target": "counting_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "quantum_complexity",
+      "target": "interactive_proofs"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "quantum_complexity",
+      "target": "communication_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "quantum_complexity",
+      "target": "cryptography"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "cryptography",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "cryptography",
+      "target": "natural_proofs"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "cryptography",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "spin_glasses",
+      "target": "phase_transitions"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "spin_glasses",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "spin_glasses",
+      "target": "counting_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "finite_model_theory",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "finite_model_theory",
+      "target": "proof_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "combinatorics",
+      "target": "sunflower_lemma"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "combinatorics",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "combinatorics",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "game_theory",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "hardness_approximation",
+      "target": "interactive_proofs"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "hardness_approximation",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "hardness_approximation",
+      "target": "game_theory"
+    }
+  ]
+}
