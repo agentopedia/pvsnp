@@ -14,7 +14,7 @@
       "node_type": "concept",
       "layer": "core",
       "display": "NP-completeness",
-      "paper_count": 18,
+      "paper_count": 20,
       "id": "NP_completeness"
     },
     {
@@ -28,7 +28,7 @@
       "node_type": "concept",
       "layer": "core",
       "display": "Circuit Complexity",
-      "paper_count": 17,
+      "paper_count": 21,
       "id": "circuit_complexity"
     },
     {
@@ -42,42 +42,42 @@
       "node_type": "concept",
       "layer": "core",
       "display": "Natural Proofs Barrier",
-      "paper_count": 15,
+      "paper_count": 17,
       "id": "natural_proofs"
     },
     {
       "node_type": "concept",
       "layer": "core",
       "display": "Algebrization Barrier",
-      "paper_count": 7,
+      "paper_count": 11,
       "id": "algebrization"
     },
     {
       "node_type": "concept",
       "layer": "core",
       "display": "Relativization / Oracle Separations",
-      "paper_count": 8,
+      "paper_count": 7,
       "id": "relativization"
     },
     {
       "node_type": "concept",
       "layer": "core",
       "display": "Polynomial Hierarchy",
-      "paper_count": 17,
+      "paper_count": 6,
       "id": "polynomial_hierarchy"
     },
     {
       "node_type": "concept",
       "layer": "adjacent",
       "display": "Geometric Complexity Theory",
-      "paper_count": 17,
+      "paper_count": 21,
       "id": "GCT"
     },
     {
       "node_type": "concept",
       "layer": "adjacent",
       "display": "Permanent vs Determinant",
-      "paper_count": 8,
+      "paper_count": 10,
       "id": "permanent_determinant"
     },
     {
@@ -91,35 +91,35 @@
       "node_type": "concept",
       "layer": "adjacent",
       "display": "Interactive Proofs & PCPs",
-      "paper_count": 14,
+      "paper_count": 16,
       "id": "interactive_proofs"
     },
     {
       "node_type": "concept",
       "layer": "adjacent",
       "display": "Randomized Complexity & Derandomization",
-      "paper_count": 13,
+      "paper_count": 16,
       "id": "randomized_complexity"
     },
     {
       "node_type": "concept",
       "layer": "adjacent",
       "display": "Counting Complexity (#P)",
-      "paper_count": 7,
+      "paper_count": 12,
       "id": "counting_complexity"
     },
     {
       "node_type": "concept",
       "layer": "proof",
       "display": "Switching Lemma & Random Restrictions",
-      "paper_count": 7,
+      "paper_count": 0,
       "id": "switching_lemma"
     },
     {
       "node_type": "concept",
       "layer": "proof",
       "display": "Communication Complexity",
-      "paper_count": 6,
+      "paper_count": 0,
       "id": "communication_complexity"
     },
     {
@@ -191,19 +191,87 @@
       "display": "Hardness of Approximation",
       "paper_count": 0,
       "id": "hardness_approximation"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "combinatorics",
+      "mention_count": 63,
+      "id": "bridge_combinatorics"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "algebra",
+      "mention_count": 61,
+      "id": "bridge_algebra"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "logic",
+      "mention_count": 40,
+      "id": "bridge_logic"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "physics",
+      "mention_count": 23,
+      "id": "bridge_physics"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "cryptography",
+      "mention_count": 17,
+      "id": "bridge_cryptography"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "none",
+      "mention_count": 8,
+      "id": "bridge_none"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "geometry",
+      "mention_count": 7,
+      "id": "bridge_geometry"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "game_theory",
+      "mention_count": 6,
+      "id": "bridge_game_theory"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "topology",
+      "mention_count": 6,
+      "id": "bridge_topology"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "mathematics",
+      "mention_count": 4,
+      "id": "bridge_mathematics"
+    },
+    {
+      "node_type": "bridge_term",
+      "display": "statistics",
+      "mention_count": 3,
+      "id": "bridge_statistics"
     }
   ],
   "edges": [
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
+      "weight": 2.0,
       "source": "P_vs_NP",
+      "cooccurrence_count": 2,
       "target": "NP_completeness"
     },
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
+      "weight": 1.5,
       "source": "P_vs_NP",
+      "cooccurrence_count": 1,
       "target": "circuit_complexity"
     },
     {
@@ -213,9 +281,59 @@
       "target": "proof_complexity"
     },
     {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "P_vs_NP",
+      "target": "natural_proofs"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "P_vs_NP",
+      "target": "relativization"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "P_vs_NP",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "P_vs_NP",
+      "target": "cryptography"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "P_vs_NP",
+      "target": "GCT"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "P_vs_NP",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "P_vs_NP",
+      "target": "combinatorics"
+    },
+    {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
+      "weight": 4.0,
       "source": "NP_completeness",
+      "cooccurrence_count": 6,
       "target": "SAT"
     },
     {
@@ -225,82 +343,584 @@
       "target": "polynomial_hierarchy"
     },
     {
-      "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "SAT",
-      "target": "proof_complexity"
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "NP_completeness",
+      "target": "game_theory"
     },
     {
-      "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "SAT",
-      "target": "phase_transitions"
+      "edge_type": "co_occurrence",
+      "weight": 3.0,
+      "cooccurrence_count": 6,
+      "source": "NP_completeness",
+      "target": "P_vs_NP"
     },
     {
-      "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "circuit_complexity",
-      "target": "natural_proofs"
+      "edge_type": "co_occurrence",
+      "weight": 2.0,
+      "cooccurrence_count": 4,
+      "source": "NP_completeness",
+      "target": "combinatorics"
     },
     {
-      "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "circuit_complexity",
-      "target": "switching_lemma"
+      "edge_type": "co_occurrence",
+      "weight": 2.0,
+      "cooccurrence_count": 4,
+      "source": "NP_completeness",
+      "target": "hardness_approximation"
     },
     {
-      "edge_type": "taxonomy_connection",
+      "edge_type": "co_occurrence",
       "weight": 1.0,
-      "source": "circuit_complexity",
+      "cooccurrence_count": 2,
+      "source": "NP_completeness",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "NP_completeness",
       "target": "algebraic_complexity"
     },
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "proof_complexity",
-      "target": "SAT"
+      "weight": 3.0,
+      "source": "SAT",
+      "cooccurrence_count": 4,
+      "target": "proof_complexity"
     },
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "proof_complexity",
-      "target": "interactive_proofs"
+      "weight": 2.5,
+      "source": "SAT",
+      "cooccurrence_count": 3,
+      "target": "phase_transitions"
     },
     {
-      "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "natural_proofs",
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "SAT",
       "target": "circuit_complexity"
     },
     {
-      "edge_type": "taxonomy_connection",
+      "edge_type": "co_occurrence",
+      "weight": 4.5,
+      "cooccurrence_count": 9,
+      "source": "SAT",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 3.0,
+      "cooccurrence_count": 6,
+      "source": "SAT",
+      "target": "combinatorics"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "SAT",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
       "weight": 1.0,
-      "source": "natural_proofs",
-      "target": "algebrization"
+      "cooccurrence_count": 2,
+      "source": "SAT",
+      "target": "hardness_approximation"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "SAT",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "SAT",
+      "target": "game_theory"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "SAT",
+      "target": "polynomial_hierarchy"
     },
     {
       "edge_type": "taxonomy_connection",
       "weight": 1.0,
-      "source": "natural_proofs",
-      "target": "relativization"
-    },
-    {
-      "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "algebrization",
-      "target": "relativization"
-    },
-    {
-      "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "algebrization",
+      "source": "circuit_complexity",
       "target": "natural_proofs"
     },
     {
       "edge_type": "taxonomy_connection",
+      "weight": 1.5,
+      "source": "circuit_complexity",
+      "cooccurrence_count": 1,
+      "target": "switching_lemma"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 3.5,
+      "source": "circuit_complexity",
+      "cooccurrence_count": 5,
+      "target": "algebraic_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "circuit_complexity",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
       "weight": 1.0,
-      "source": "algebrization",
+      "cooccurrence_count": 2,
+      "source": "circuit_complexity",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 3.5,
+      "cooccurrence_count": 7,
+      "source": "circuit_complexity",
+      "target": "combinatorics"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "circuit_complexity",
+      "target": "cryptography"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "circuit_complexity",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "circuit_complexity",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "circuit_complexity",
+      "target": "phase_transitions"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "circuit_complexity",
+      "target": "hardness_approximation"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "circuit_complexity",
+      "target": "counting_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "circuit_complexity",
+      "target": "permanent_determinant"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "circuit_complexity",
+      "target": "proof_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "circuit_complexity",
+      "target": "finite_model_theory"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "circuit_complexity",
+      "target": "communication_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.5,
+      "source": "proof_complexity",
+      "cooccurrence_count": 1,
+      "target": "SAT"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.5,
+      "source": "proof_complexity",
+      "cooccurrence_count": 1,
       "target": "interactive_proofs"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 3.5,
+      "cooccurrence_count": 7,
+      "source": "proof_complexity",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "proof_complexity",
+      "target": "algebraic_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "proof_complexity",
+      "target": "counting_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "proof_complexity",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "proof_complexity",
+      "target": "cryptography"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 2.5,
+      "cooccurrence_count": 5,
+      "source": "proof_complexity",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "proof_complexity",
+      "target": "combinatorics"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "proof_complexity",
+      "target": "switching_lemma"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "proof_complexity",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "proof_complexity",
+      "target": "diagonalization"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "proof_complexity",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "proof_complexity",
+      "target": "finite_model_theory"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 6.0,
+      "source": "natural_proofs",
+      "cooccurrence_count": 10,
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 2.0,
+      "source": "natural_proofs",
+      "cooccurrence_count": 2,
+      "target": "algebrization"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.5,
+      "source": "natural_proofs",
+      "cooccurrence_count": 1,
+      "target": "relativization"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "natural_proofs",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "natural_proofs",
+      "target": "cryptography"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "natural_proofs",
+      "target": "game_theory"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "natural_proofs",
+      "target": "combinatorics"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 2.5,
+      "cooccurrence_count": 5,
+      "source": "natural_proofs",
+      "target": "algebraic_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "natural_proofs",
+      "target": "permanent_determinant"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 2.0,
+      "cooccurrence_count": 4,
+      "source": "natural_proofs",
+      "target": "hardness_approximation"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "natural_proofs",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "natural_proofs",
+      "target": "proof_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "natural_proofs",
+      "target": "GCT"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 2.0,
+      "cooccurrence_count": 4,
+      "source": "natural_proofs",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "natural_proofs",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "natural_proofs",
+      "target": "spin_glasses"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "natural_proofs",
+      "target": "communication_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "natural_proofs",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "natural_proofs",
+      "target": "counting_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 3.0,
+      "source": "algebrization",
+      "cooccurrence_count": 4,
+      "target": "relativization"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 2.5,
+      "source": "algebrization",
+      "cooccurrence_count": 3,
+      "target": "natural_proofs"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 2.0,
+      "source": "algebrization",
+      "cooccurrence_count": 2,
+      "target": "interactive_proofs"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 3.0,
+      "cooccurrence_count": 6,
+      "source": "algebrization",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "algebrization",
+      "target": "cryptography"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "algebrization",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "algebrization",
+      "target": "combinatorics"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 2.5,
+      "cooccurrence_count": 5,
+      "source": "algebrization",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "algebrization",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "algebrization",
+      "target": "polynomial_hierarchy"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "algebrization",
+      "target": "permanent_determinant"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "algebrization",
+      "target": "hardness_approximation"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "algebrization",
+      "target": "counting_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "algebrization",
+      "target": "proof_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "algebrization",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "algebrization",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "algebrization",
+      "target": "diagonalization"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "algebrization",
+      "target": "algebraic_complexity"
     },
     {
       "edge_type": "taxonomy_connection",
@@ -321,6 +941,90 @@
       "target": "diagonalization"
     },
     {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "relativization",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "relativization",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "relativization",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "relativization",
+      "target": "polynomial_hierarchy"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "relativization",
+      "target": "switching_lemma"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "relativization",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "relativization",
+      "target": "interactive_proofs"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "relativization",
+      "target": "proof_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "relativization",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "relativization",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "relativization",
+      "target": "counting_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "relativization",
+      "target": "hardness_approximation"
+    },
+    {
       "edge_type": "taxonomy_connection",
       "weight": 1.0,
       "source": "polynomial_hierarchy",
@@ -328,8 +1032,9 @@
     },
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
+      "weight": 2.5,
       "source": "polynomial_hierarchy",
+      "cooccurrence_count": 3,
       "target": "counting_complexity"
     },
     {
@@ -339,36 +1044,166 @@
       "target": "randomized_complexity"
     },
     {
-      "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "GCT",
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "polynomial_hierarchy",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "polynomial_hierarchy",
+      "target": "interactive_proofs"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "polynomial_hierarchy",
       "target": "algebraic_complexity"
     },
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
+      "weight": 8.0,
       "source": "GCT",
+      "cooccurrence_count": 14,
+      "target": "algebraic_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 3.0,
+      "source": "GCT",
+      "cooccurrence_count": 4,
       "target": "permanent_determinant"
     },
     {
-      "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "permanent_determinant",
-      "target": "GCT"
+      "edge_type": "co_occurrence",
+      "weight": 3.0,
+      "cooccurrence_count": 6,
+      "source": "GCT",
+      "target": "combinatorics"
     },
     {
-      "edge_type": "taxonomy_connection",
-      "weight": 1.0,
-      "source": "permanent_determinant",
-      "target": "algebraic_complexity"
+      "edge_type": "co_occurrence",
+      "weight": 2.0,
+      "cooccurrence_count": 4,
+      "source": "GCT",
+      "target": "P_vs_NP"
     },
     {
-      "edge_type": "taxonomy_connection",
+      "edge_type": "co_occurrence",
       "weight": 1.0,
-      "source": "permanent_determinant",
+      "cooccurrence_count": 2,
+      "source": "GCT",
       "target": "counting_complexity"
     },
     {
+      "edge_type": "co_occurrence",
+      "weight": 2.5,
+      "cooccurrence_count": 5,
+      "source": "GCT",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "GCT",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "GCT",
+      "target": "proof_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "GCT",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.0,
+      "source": "permanent_determinant",
+      "target": "GCT"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 3.5,
+      "source": "permanent_determinant",
+      "cooccurrence_count": 5,
+      "target": "algebraic_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 2.5,
+      "source": "permanent_determinant",
+      "cooccurrence_count": 3,
+      "target": "counting_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "permanent_determinant",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "permanent_determinant",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "permanent_determinant",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "permanent_determinant",
+      "target": "combinatorics"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "permanent_determinant",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "permanent_determinant",
+      "target": "hardness_approximation"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "permanent_determinant",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "permanent_determinant",
+      "target": "communication_complexity"
+    },
+    {
       "edge_type": "taxonomy_connection",
       "weight": 1.0,
       "source": "algebraic_complexity",
@@ -379,6 +1214,13 @@
       "weight": 1.0,
       "source": "algebraic_complexity",
       "target": "permanent_determinant"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "algebraic_complexity",
+      "target": "circuit_complexity"
     },
     {
       "edge_type": "taxonomy_connection",
@@ -388,15 +1230,101 @@
     },
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
+      "weight": 4.0,
       "source": "interactive_proofs",
+      "cooccurrence_count": 6,
       "target": "hardness_approximation"
     },
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
+      "weight": 3.0,
       "source": "interactive_proofs",
+      "cooccurrence_count": 4,
       "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "interactive_proofs",
+      "target": "polynomial_hierarchy"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "interactive_proofs",
+      "target": "randomized_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "interactive_proofs",
+      "target": "communication_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 2.5,
+      "cooccurrence_count": 5,
+      "source": "interactive_proofs",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "interactive_proofs",
+      "target": "game_theory"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "interactive_proofs",
+      "target": "combinatorics"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "interactive_proofs",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "interactive_proofs",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "interactive_proofs",
+      "target": "proof_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "interactive_proofs",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "interactive_proofs",
+      "target": "spin_glasses"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "interactive_proofs",
+      "target": "phase_transitions"
     },
     {
       "edge_type": "taxonomy_connection",
@@ -406,8 +1334,9 @@
     },
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
+      "weight": 3.5,
       "source": "randomized_complexity",
+      "cooccurrence_count": 5,
       "target": "cryptography"
     },
     {
@@ -417,22 +1346,144 @@
       "target": "polynomial_hierarchy"
     },
     {
-      "edge_type": "taxonomy_connection",
+      "edge_type": "co_occurrence",
+      "weight": 4.0,
+      "cooccurrence_count": 8,
+      "source": "randomized_complexity",
+      "target": "circuit_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 2.0,
+      "cooccurrence_count": 4,
+      "source": "randomized_complexity",
+      "target": "P_vs_NP"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "randomized_complexity",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 2.5,
+      "cooccurrence_count": 5,
+      "source": "randomized_complexity",
+      "target": "algebraic_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 2.0,
+      "cooccurrence_count": 4,
+      "source": "randomized_complexity",
+      "target": "combinatorics"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "randomized_complexity",
+      "target": "hardness_approximation"
+    },
+    {
+      "edge_type": "co_occurrence",
       "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "randomized_complexity",
+      "target": "communication_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "randomized_complexity",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "taxonomy_connection",
+      "weight": 1.5,
       "source": "counting_complexity",
+      "cooccurrence_count": 1,
       "target": "permanent_determinant"
     },
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
+      "weight": 2.5,
       "source": "counting_complexity",
+      "cooccurrence_count": 3,
       "target": "polynomial_hierarchy"
     },
     {
       "edge_type": "taxonomy_connection",
-      "weight": 1.0,
+      "weight": 2.0,
       "source": "counting_complexity",
+      "cooccurrence_count": 2,
       "target": "phase_transitions"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "counting_complexity",
+      "target": "algebraic_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 3.5,
+      "cooccurrence_count": 7,
+      "source": "counting_complexity",
+      "target": "NP_completeness"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "counting_complexity",
+      "target": "combinatorics"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 0.5,
+      "cooccurrence_count": 1,
+      "source": "counting_complexity",
+      "target": "game_theory"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.5,
+      "cooccurrence_count": 3,
+      "source": "counting_complexity",
+      "target": "hardness_approximation"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "counting_complexity",
+      "target": "spin_glasses"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "counting_complexity",
+      "target": "quantum_complexity"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "counting_complexity",
+      "target": "SAT"
+    },
+    {
+      "edge_type": "co_occurrence",
+      "weight": 1.0,
+      "cooccurrence_count": 2,
+      "source": "counting_complexity",
+      "target": "finite_model_theory"
     },
     {
       "edge_type": "taxonomy_connection",
