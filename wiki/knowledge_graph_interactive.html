@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 700px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#7F77DD", "font": {"color": "#333333"}, "id": "P_vs_NP", "label": "P vs NP Problem", "shape": "dot", "size": 17.535824175824175, "title": "P vs NP Problem\u003cbr\u003eLayer: core\u003cbr\u003ePapers: 14\u003cbr\u003eCentrality: 0.0845"}, {"color": "#7F77DD", "font": {"color": "#333333"}, "id": "NP_completeness", "label": "NP-completeness", "shape": "dot", "size": 18.075384615384614, "title": "NP-completeness\u003cbr\u003eLayer: core\u003cbr\u003ePapers: 18\u003cbr\u003eCentrality: 0.1025"}, {"color": "#7F77DD", "font": {"color": "#333333"}, "id": "SAT", "label": "Boolean Satisfiability (SAT)", "shape": "dot", "size": 20.90021978021978, "title": "Boolean Satisfiability (SAT)\u003cbr\u003eLayer: core\u003cbr\u003ePapers: 19\u003cbr\u003eCentrality: 0.1967"}, {"color": "#7F77DD", "font": {"color": "#333333"}, "id": "circuit_complexity", "label": "Circuit Complexity", "shape": "dot", "size": 21.995934065934065, "title": "Circuit Complexity\u003cbr\u003eLayer: core\u003cbr\u003ePapers: 17\u003cbr\u003eCentrality: 0.2332"}, {"color": "#7F77DD", "font": {"color": "#333333"}, "id": "proof_complexity", "label": "Proof Complexity", "shape": "dot", "size": 19.981648351648353, "title": "Proof Complexity\u003cbr\u003eLayer: core\u003cbr\u003ePapers: 11\u003cbr\u003eCentrality: 0.1661"}, {"color": "#7F77DD", "font": {"color": "#333333"}, "id": "natural_proofs", "label": "Natural Proofs Barrier", "shape": "dot", "size": 21.56703296703297, "title": "Natural Proofs Barrier\u003cbr\u003eLayer: core\u003cbr\u003ePapers: 15\u003cbr\u003eCentrality: 0.2189"}, {"color": "#7F77DD", "font": {"color": "#333333"}, "id": "algebrization", "label": "Algebrization Barrier", "shape": "dot", "size": 17.845054945054947, "title": "Algebrization Barrier\u003cbr\u003eLayer: core\u003cbr\u003ePapers: 7\u003cbr\u003eCentrality: 0.0948"}, {"color": "#7F77DD", "font": {"color": "#333333"}, "id": "relativization", "label": "Relativization / Oracle Separations", "shape": "dot", "size": 16.783516483516483, "title": "Relativization / Oracle Separations\u003cbr\u003eLayer: core\u003cbr\u003ePapers: 8\u003cbr\u003eCentrality: 0.0595"}, {"color": "#7F77DD", "font": {"color": "#333333"}, "id": "polynomial_hierarchy", "label": "Polynomial Hierarchy", "shape": "dot", "size": 20.892087912087913, "title": "Polynomial Hierarchy\u003cbr\u003eLayer: core\u003cbr\u003ePapers: 17\u003cbr\u003eCentrality: 0.1964"}, {"color": "#1D9E75", "font": {"color": "#333333"}, "id": "GCT", "label": "Geometric Complexity Theory", "shape": "dot", "size": 15.0, "title": "Geometric Complexity Theory\u003cbr\u003eLayer: adjacent\u003cbr\u003ePapers: 17\u003cbr\u003eCentrality: 0.0000"}, {"color": "#1D9E75", "font": {"color": "#333333"}, "id": "permanent_determinant", "label": "Permanent vs Determinant", "shape": "dot", "size": 18.275824175824177, "title": "Permanent vs Determinant\u003cbr\u003eLayer: adjacent\u003cbr\u003ePapers: 8\u003cbr\u003eCentrality: 0.1092"}, {"color": "#1D9E75", "font": {"color": "#333333"}, "id": "algebraic_complexity", "label": "Algebraic Circuit Complexity", "shape": "dot", "size": 16.645054945054945, "title": "Algebraic Circuit Complexity\u003cbr\u003eLayer: adjacent\u003cbr\u003ePapers: 2\u003cbr\u003eCentrality: 0.0548"}, {"color": "#1D9E75", "font": {"color": "#333333"}, "id": "interactive_proofs", "label": "Interactive Proofs \u0026 PCPs", "shape": "dot", "size": 22.442087912087914, "title": "Interactive Proofs \u0026 PCPs\u003cbr\u003eLayer: adjacent\u003cbr\u003ePapers: 14\u003cbr\u003eCentrality: 0.2481"}, {"color": "#1D9E75", "font": {"color": "#333333"}, "id": "randomized_complexity", "label": "Randomized Complexity \u0026 Derandomization", "shape": "dot", "size": 19.372307692307693, "title": "Randomized Complexity \u0026 Derandomization\u003cbr\u003eLayer: adjacent\u003cbr\u003ePapers: 13\u003cbr\u003eCentrality: 0.1457"}, {"color": "#1D9E75", "font": {"color": "#333333"}, "id": "counting_complexity", "label": "Counting Complexity (#P)", "shape": "dot", "size": 21.045934065934066, "title": "Counting Complexity (#P)\u003cbr\u003eLayer: adjacent\u003cbr\u003ePapers: 7\u003cbr\u003eCentrality: 0.2015"}, {"color": "#D85A30", "font": {"color": "#333333"}, "id": "switching_lemma", "label": "Switching Lemma \u0026 Random Restrictions", "shape": "dot", "size": 18.11241758241758, "title": "Switching Lemma \u0026 Random Restrictions\u003cbr\u003eLayer: proof\u003cbr\u003ePapers: 7\u003cbr\u003eCentrality: 0.1037"}, {"color": "#D85A30", "font": {"color": "#333333"}, "id": "communication_complexity", "label": "Communication Complexity", "shape": "dot", "size": 15.814615384615385, "title": "Communication Complexity\u003cbr\u003eLayer: proof\u003cbr\u003ePapers: 6\u003cbr\u003eCentrality: 0.0272"}, {"color": "#D85A30", "font": {"color": "#333333"}, "id": "sunflower_lemma", "label": "Sunflower Lemma", "shape": "dot", "size": 16.176923076923078, "title": "Sunflower Lemma\u003cbr\u003eLayer: proof\u003cbr\u003ePapers: 0\u003cbr\u003eCentrality: 0.0392"}, {"color": "#D85A30", "font": {"color": "#333333"}, "id": "diagonalization", "label": "Diagonalization \u0026 Hierarchy Theorems", "shape": "dot", "size": 15.729670329670329, "title": "Diagonalization \u0026 Hierarchy Theorems\u003cbr\u003eLayer: proof\u003cbr\u003ePapers: 0\u003cbr\u003eCentrality: 0.0243"}, {"color": "#BA7517", "font": {"color": "#333333"}, "id": "phase_transitions", "label": "Phase Transitions in CSPs", "shape": "dot", "size": 18.374725274725275, "title": "Phase Transitions in CSPs\u003cbr\u003eLayer: bridge\u003cbr\u003ePapers: 0\u003cbr\u003eCentrality: 0.1125"}, {"color": "#BA7517", "font": {"color": "#333333"}, "id": "quantum_complexity", "label": "Quantum Complexity", "shape": "dot", "size": 18.053846153846152, "title": "Quantum Complexity\u003cbr\u003eLayer: bridge\u003cbr\u003ePapers: 0\u003cbr\u003eCentrality: 0.1018"}, {"color": "#BA7517", "font": {"color": "#333333"}, "id": "cryptography", "label": "Cryptography \u0026 One-Way Functions", "shape": "dot", "size": 16.532307692307693, "title": "Cryptography \u0026 One-Way Functions\u003cbr\u003eLayer: bridge\u003cbr\u003ePapers: 0\u003cbr\u003eCentrality: 0.0511"}, {"color": "#BA7517", "font": {"color": "#333333"}, "id": "spin_glasses", "label": "Spin Glasses \u0026 Statistical Physics", "shape": "dot", "size": 15.0, "title": "Spin Glasses \u0026 Statistical Physics\u003cbr\u003eLayer: bridge\u003cbr\u003ePapers: 0\u003cbr\u003eCentrality: 0.0000"}, {"color": "#BA7517", "font": {"color": "#333333"}, "id": "finite_model_theory", "label": "Finite Model Theory \u0026 Descriptive Complexity", "shape": "dot", "size": 15.0, "title": "Finite Model Theory \u0026 Descriptive Complexity\u003cbr\u003eLayer: bridge\u003cbr\u003ePapers: 0\u003cbr\u003eCentrality: 0.0000"}, {"color": "#BA7517", "font": {"color": "#333333"}, "id": "combinatorics", "label": "Extremal Combinatorics", "shape": "dot", "size": 15.243956043956045, "title": "Extremal Combinatorics\u003cbr\u003eLayer: bridge\u003cbr\u003ePapers: 0\u003cbr\u003eCentrality: 0.0081"}, {"color": "#BA7517", "font": {"color": "#333333"}, "id": "game_theory", "label": "Game Theory \u0026 PPAD", "shape": "dot", "size": 15.0, "title": "Game Theory \u0026 PPAD\u003cbr\u003eLayer: bridge\u003cbr\u003ePapers: 0\u003cbr\u003eCentrality: 0.0000"}, {"color": "#BA7517", "font": {"color": "#333333"}, "id": "hardness_approximation", "label": "Hardness of Approximation", "shape": "dot", "size": 16.942087912087914, "title": "Hardness of Approximation\u003cbr\u003eLayer: bridge\u003cbr\u003ePapers: 0\u003cbr\u003eCentrality: 0.0647"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "P_vs_NP", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "NP_completeness", "value": 1.0}, {"arrows": "to", "from": "P_vs_NP", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "circuit_complexity", "value": 1.0}, {"arrows": "to", "from": "P_vs_NP", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "proof_complexity", "value": 1.0}, {"arrows": "to", "from": "NP_completeness", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "SAT", "value": 1.0}, {"arrows": "to", "from": "NP_completeness", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "polynomial_hierarchy", "value": 1.0}, {"arrows": "to", "from": "SAT", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "proof_complexity", "value": 1.0}, {"arrows": "to", "from": "SAT", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "phase_transitions", "value": 1.0}, {"arrows": "to", "from": "circuit_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "natural_proofs", "value": 1.0}, {"arrows": "to", "from": "circuit_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "switching_lemma", "value": 1.0}, {"arrows": "to", "from": "circuit_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "algebraic_complexity", "value": 1.0}, {"arrows": "to", "from": "proof_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "SAT", "value": 1.0}, {"arrows": "to", "from": "proof_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "interactive_proofs", "value": 1.0}, {"arrows": "to", "from": "natural_proofs", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "circuit_complexity", "value": 1.0}, {"arrows": "to", "from": "natural_proofs", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "algebrization", "value": 1.0}, {"arrows": "to", "from": "natural_proofs", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "relativization", "value": 1.0}, {"arrows": "to", "from": "algebrization", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "relativization", "value": 1.0}, {"arrows": "to", "from": "algebrization", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "natural_proofs", "value": 1.0}, {"arrows": "to", "from": "algebrization", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "interactive_proofs", "value": 1.0}, {"arrows": "to", "from": "relativization", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "algebrization", "value": 1.0}, {"arrows": "to", "from": "relativization", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "natural_proofs", "value": 1.0}, {"arrows": "to", "from": "relativization", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "diagonalization", "value": 1.0}, {"arrows": "to", "from": "polynomial_hierarchy", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "NP_completeness", "value": 1.0}, {"arrows": "to", "from": "polynomial_hierarchy", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "counting_complexity", "value": 1.0}, {"arrows": "to", "from": "polynomial_hierarchy", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "randomized_complexity", "value": 1.0}, {"arrows": "to", "from": "GCT", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "algebraic_complexity", "value": 1.0}, {"arrows": "to", "from": "GCT", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "permanent_determinant", "value": 1.0}, {"arrows": "to", "from": "permanent_determinant", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "GCT", "value": 1.0}, {"arrows": "to", "from": "permanent_determinant", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "algebraic_complexity", "value": 1.0}, {"arrows": "to", "from": "permanent_determinant", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "counting_complexity", "value": 1.0}, {"arrows": "to", "from": "algebraic_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "GCT", "value": 1.0}, {"arrows": "to", "from": "algebraic_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "permanent_determinant", "value": 1.0}, {"arrows": "to", "from": "interactive_proofs", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "algebrization", "value": 1.0}, {"arrows": "to", "from": "interactive_proofs", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "hardness_approximation", "value": 1.0}, {"arrows": "to", "from": "interactive_proofs", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "quantum_complexity", "value": 1.0}, {"arrows": "to", "from": "randomized_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "natural_proofs", "value": 1.0}, {"arrows": "to", "from": "randomized_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "cryptography", "value": 1.0}, {"arrows": "to", "from": "randomized_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "polynomial_hierarchy", "value": 1.0}, {"arrows": "to", "from": "counting_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "permanent_determinant", "value": 1.0}, {"arrows": "to", "from": "counting_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "polynomial_hierarchy", "value": 1.0}, {"arrows": "to", "from": "counting_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "phase_transitions", "value": 1.0}, {"arrows": "to", "from": "switching_lemma", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "circuit_complexity", "value": 1.0}, {"arrows": "to", "from": "switching_lemma", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "sunflower_lemma", "value": 1.0}, {"arrows": "to", "from": "switching_lemma", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "SAT", "value": 1.0}, {"arrows": "to", "from": "communication_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "circuit_complexity", "value": 1.0}, {"arrows": "to", "from": "communication_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "quantum_complexity", "value": 1.0}, {"arrows": "to", "from": "sunflower_lemma", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "switching_lemma", "value": 1.0}, {"arrows": "to", "from": "sunflower_lemma", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "circuit_complexity", "value": 1.0}, {"arrows": "to", "from": "sunflower_lemma", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "combinatorics", "value": 1.0}, {"arrows": "to", "from": "diagonalization", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "relativization", "value": 1.0}, {"arrows": "to", "from": "diagonalization", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "P_vs_NP", "value": 1.0}, {"arrows": "to", "from": "phase_transitions", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "SAT", "value": 1.0}, {"arrows": "to", "from": "phase_transitions", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "spin_glasses", "value": 1.0}, {"arrows": "to", "from": "phase_transitions", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "counting_complexity", "value": 1.0}, {"arrows": "to", "from": "quantum_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "interactive_proofs", "value": 1.0}, {"arrows": "to", "from": "quantum_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "communication_complexity", "value": 1.0}, {"arrows": "to", "from": "quantum_complexity", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "cryptography", "value": 1.0}, {"arrows": "to", "from": "cryptography", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "randomized_complexity", "value": 1.0}, {"arrows": "to", "from": "cryptography", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "natural_proofs", "value": 1.0}, {"arrows": "to", "from": "cryptography", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "P_vs_NP", "value": 1.0}, {"arrows": "to", "from": "spin_glasses", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "phase_transitions", "value": 1.0}, {"arrows": "to", "from": "spin_glasses", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "SAT", "value": 1.0}, {"arrows": "to", "from": "spin_glasses", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "counting_complexity", "value": 1.0}, {"arrows": "to", "from": "finite_model_theory", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "P_vs_NP", "value": 1.0}, {"arrows": "to", "from": "finite_model_theory", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "proof_complexity", "value": 1.0}, {"arrows": "to", "from": "combinatorics", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "sunflower_lemma", "value": 1.0}, {"arrows": "to", "from": "combinatorics", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "circuit_complexity", "value": 1.0}, {"arrows": "to", "from": "combinatorics", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "SAT", "value": 1.0}, {"arrows": "to", "from": "game_theory", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "NP_completeness", "value": 1.0}, {"arrows": "to", "from": "hardness_approximation", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "interactive_proofs", "value": 1.0}, {"arrows": "to", "from": "hardness_approximation", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "NP_completeness", "value": 1.0}, {"arrows": "to", "from": "hardness_approximation", "title": "Type: taxonomy_connection\u003cbr\u003eWeight: 1.00", "to": "game_theory", "value": 1.0}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"physics": {"forceAtlas2Based": {"gravitationalConstant": -80, "springLength": 120}, "solver": "forceAtlas2Based"}, "edges": {"smooth": {"type": "continuous"}, "arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}}, "interaction": {"hover": true, "tooltipDelay": 100}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
