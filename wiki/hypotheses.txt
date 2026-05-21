@@ -1,0 +1,217 @@
+### H1: OVERLAP GAP PROPERTY IN BOOLEAN CIRCUIT SPACE
+
+**Hypothesis:** The Overlap Gap Property (OGP), which explains algorithmic failure in random CSPs by showing that near-optimal solutions are topologically isolated, can be lifted from the space of *variable assignments* to the space of *Boolean circuits* computing a function, proving that polynomial-size circuits cannot approximate NP-hard truth tables.
+
+**Inspiration:** The recent statistical physics breakthroughs by Gamarnik and Sly, which proved that local search algorithms fail on random graphs due to a phase transition where solutions shatter into disconnected clusters (the OGP).
+
+**Avoids relativization:** OGP is a geometric property of a specific solution manifold (the Hamming graph of valid circuits), which is entirely structural and oblivious to Turing machine oracle queries.
+
+**Avoids natural proofs:** The Overlap Gap Property is a highly fragile, topological property of the phase space. Furthermore, detecting whether a function's circuit space exhibits OGP is itself NP-hard, violating the "Constructiveness" requirement of Natural Proofs.
+
+**Avoids algebrization:** The OGP relies on discrete Hamming distances and clustering in Boolean hypercubes, which are obliterated when extended to continuous polynomials over finite fields via low-degree extensions.
+
+**First concrete step:** Prove that the space of $O(n)$ size circuits computing the Parity function exhibits the Overlap Gap Property (i.e., any two circuits computing Parity with $99\%$ accuracy are either structurally identical or differ in at least $\Omega(n)$ gates).
+
+**Cross-domain source:** Statistical Physics / Spin Glass Theory (specifically, replica symmetry breaking).
+
+**Risk level:** high
+
+**Why unexplored:** The literature exhibits a severe gap between SAT engineering and SAT theory; complexity theorists have treated phase transitions as an *average-case algorithmic* phenomenon rather than a *worst-case structural* tool for circuit lower bounds.
+
+---
+
+### H2: SLICE RANK OF HARDNESS MAGNIFICATION TENSORS
+
+**Hypothesis:** By expressing the truth table of the Minimum Circuit Size Problem (MCSP) as a multi-dimensional tensor, we can use the sub-additive "slice rank" measure to show that any $\textsf{NC}^1$ circuit computing MCSP requires exponential size, executing a Hardness Magnification theorem unconditionally.
+
+**Inspiration:** The polynomial method breakthrough by Croot, Lev, Pach, and later Tao (the Cap Set Problem), which used slice rank to bypass traditional rank barriers in additive combinatorics.
+
+**Avoids relativization:** Slice rank bounds are non-black-box; they depend on the exact multi-linear algebraic structure of the specific target tensor, not on generic Turing reductions.
+
+**Avoids natural proofs:** Random tensors have maximal slice rank with high probability. This approach bounds the complexity of MCSP by proving it has an anomalously *low* slice rank embedding, exploiting a specific, non-random fragility (violating the "Largeness" condition).
+
+**Avoids algebrization:** Unlike standard tensor rank or matrix rank, slice rank is specifically designed to be sub-additive and behaves completely differently under low-degree polynomial extensions, breaking the algebraic lifting used in the algebrization barrier.
+
+**First concrete step:** Formulate the truth table of a sparse variant of MCSP as an order-3 tensor and calculate its exact slice rank over $\mathbb{F}_2$.
+
+**Cross-domain source:** Extremal Combinatorics / Additive Number Theory.
+
+**Risk level:** medium
+
+**Why unexplored:** The database shows 0 papers on extremal combinatorics. The complexity community has been heavily biased toward continuous Geometric Complexity Theory (GCT), ignoring discrete tensor invariants like slice rank that have recently revolutionized combinatorics.
+
+---
+
+### H3: PERSISTENT HOMOLOGY OF SATISFIABILITY MANIFOLDS
+
+**Hypothesis:** The topological features (Betti numbers) of the semi-algebraic set representing the continuous relaxation of 3-SAT instances scale exponentially with the number of variables, and evaluating these topological invariants requires strictly greater computational power than $\textsf{P}$, separating P from NP via algebraic topology.
+
+**Inspiration:** Topological Data Analysis (TDA) and the use of persistent homology to find high-dimensional voids in complex datasets, which inherently captures global structural dependencies that local algorithms miss.
+
+**Avoids relativization:** Betti numbers are topological invariants of continuous real manifolds, completely sidestepping Turing machine instruction sets and oracle queries.
+
+**Avoids natural proofs:** A random Boolean function's continuous relaxation has trivial (or highly uniform) Betti numbers. The exponential scaling of Betti numbers in NP-complete problems is a rare, non-constructive property of highly structured combinatorial constraints.
+
+**Avoids algebrization:** Persistent homology is calculated over the reals ($\mathbb{R}$) using topological filtration, which does not map to the low-degree polynomial extensions over finite fields ($\mathbb{F}_q$) that algebrization relies upon.
+
+**First concrete step:** Compute the 0th and 1st Betti numbers of the continuous relaxation of the 3-coloring problem on small wheel graphs, and prove they cannot be approximated by a polynomial-time gradient descent.
+
+**Cross-domain source:** Algebraic Topology / Topological Data Analysis.
+
+**Risk level:** moonshot
+
+**Why unexplored:** Theoretical computer science is deeply entrenched in discrete math and finite fields; incorporating continuous topological invariants to study worst-case Boolean complexity remains a massive cultural and technical blind spot.
+
+---
+
+### H4: QUANTUM NON-LOCAL RIGIDITY OF BOOLEAN FUNCTIONS
+
+**Hypothesis:** We can separate P from NP by translating Boolean functions into multi-prover non-local games, and proving that the required quantum entanglement (measured by the von Neumann entropy of the provers' shared state) to win the game with probability 1 is exponentially large for NP-complete functions, but polynomial for functions in P.
+
+**Inspiration:** The $\text{MIP}^* = \text{RE}$ breakthrough, which showed that quantum entanglement allows multi-prover interactive proofs to verify uncomputable functions, demonstrating the profound power of non-local game rigidity.
+
+**Avoids relativization:** It is a proven mathematical fact that quantum interactive proofs ($\text{MIP}^*$) do not relativize, because entanglement cannot be simulated by a classical oracle.
+
+**Avoids natural proofs:** The rigidity of a quantum game (the uniqueness of the optimal entangled strategy) is highly specific to the algebraic symmetries of the game. Random functions do not yield rigid games, violating the "Largeness" condition.
+
+**Avoids algebrization:** Tsirelson's bounds and operator algebras (C*-algebras) govern quantum strategies, which do not rely on arithmetization or low-degree extensions.
+
+**First concrete step:** Design a 2-prover non-local game for the Exact Cover problem and prove a non-trivial lower bound on the entanglement entropy required to win the game perfectly.
+
+**Cross-domain source:** Quantum Physics / Operator Algebras.
+
+**Risk level:** high
+
+**Why unexplored:** While quantum complexity is expanding, it is almost exclusively used to study quantum classes (BQP, QMA). Using quantum entanglement purely as a structural mathematical tool to prove *classical* Boolean lower bounds is virtually untouched.
+
+---
+
+### H5: TROPICAL GEOMETRY OF DESCRIPTIVE COMPLEXITY
+
+**Hypothesis:** By mapping the finite model theory characterization of NP (Fagin's theorem: NP = $\text{SO}\exists$) into a tropical semi-ring (min-plus algebra), we can prove that the tropical variety representing existential second-order logic has a strictly higher tropical dimension than any variety representing First-Order Logic with Least Fixed Point (P).
+
+**Inspiration:** The use of tropical geometry to resolve bounds in algebraic geometry by translating complex continuous curves into piecewise-linear discrete graphs.
+
+**Avoids relativization:** Descriptive complexity is purely syntactic; it evaluates the expressive power of logic on finite structures, entirely eliminating the Turing machine model and its oracles.
+
+**Avoids natural proofs:** The tropical dimension of a logical formula is a syntactic invariant, not a statistical property of its truth table. It provides no algorithm to distinguish random functions.
+
+**Avoids algebrization:** Tropical mathematics operates over the min-plus semiring, which lacks subtraction. This destroys the field structure required to create the low-degree polynomial extensions necessary for algebrizing oracles.
+
+**First concrete step:** Define the tropicalization of a First-Order logic formula on a finite directed graph, and compute the tropical dimension of the connectivity property.
+
+**Cross-domain source:** Tropical Geometry / Finite Model Theory.
+
+**Risk level:** moonshot
+
+**Why unexplored:** Finite Model Theory is heavily siloed from core complexity, as noted in the gap analysis. Bridging it with Tropical Geometry—a relatively new field in algebraic geometry—creates a completely novel mathematical language for complexity.
+
+---
+
+### H6: DYNAMICAL OBSTRUCTIONS VIA BROUWER FIXED POINTS
+
+**Hypothesis:** The structural hardness of TFNP (Total Functions in NP) and PPAD can be used to separate P from NP by showing that any polynomial-size circuit simulating an NP-complete problem induces a continuous dynamical system whose Brouwer fixed point must, by topological necessity, have exponential irrationality (requires exponential bits to represent), making it uncomputable in P.
+
+**Inspiration:** The PPAD-completeness of finding Nash Equilibria (Daskalakis, Goldberg, Papadimitriou), which showed that continuous fixed-point theorems inherently harbor exponential computational hardness.
+
+**Avoids relativization:** Brouwer fixed points and their bit-complexity are topological properties of continuous spaces, which do not relativize to discrete Turing oracles.
+
+**Avoids natural proofs:** The existence of a fixed point relies on the precise parity of the boundary conditions (Sperner's Lemma). A random function does not possess this structured boundary geometry, violating "Largeness".
+
+**Avoids algebrization:** Fixed points in continuous simplices involve irrational numbers and limits, which cannot be arithmetized over finite fields $\mathbb{F}_q$.
+
+**First concrete step:** Construct a continuous dynamical system representing the 3-SAT problem and prove a lower bound on the bit-precision required to isolate its Brouwer fixed point.
+
+**Cross-domain source:** Economics (Game Theory) / Continuous Dynamical Systems.
+
+**Risk level:** medium
+
+**Why unexplored:** The literature treats Hardness of Approximation and PPAD entirely as algorithmic limits. Treating the underlying topological fixed-point theorems as a non-constructive barrier to *circuit simulation* itself has not been attempted.
+
+---
+
+### H7: INFORMATION BOTTLENECK IN KARCHMER-WIGDERSON GAMES
+
+**Hypothesis:** By applying the Information Bottleneck principle to Karchmer-Wigderson communication games, we can prove that any protocol solving the KW game for an NP-complete function must leak an exponential amount of internal mutual information, strictly separating it from functions in P.
+
+**Inspiration:** Braverman's work on Information Complexity, which showed that the internal information cost of a communication protocol is a powerful, non-trivial lower bound on its communication complexity.
+
+**Avoids relativization:** KW games map circuit depth directly to combinatorial communication protocols, completely bypassing Turing machines and oracles.
+
+**Avoids natural proofs:** Information complexity measures the *internal state and leakage* of a specific optimal protocol, which is a property of the communication transcript, not a statistical property of the function's truth table.
+
+**Avoids algebrization:** The Information Bottleneck uses Shannon entropy and Kullback-Leibler divergence, bypassing algebraic polynomials entirely.
+
+**First concrete step:** Prove a tight information complexity lower bound for the Karchmer-Wigderson game of the Clique function, independent of its standard communication complexity.
+
+**Cross-domain source:** Information Theory / Machine Learning (Information Bottleneck).
+
+**Risk level:** high
+
+**Why unexplored:** The gap analysis reveals a deep disconnect: Communication Complexity is recognized as a bridge, but Information Complexity (a continuous, entropy-based measure) has primarily been used for direct sum theorems, not as a direct assault on the KW games of NP-complete functions.
+
+---
+
+### H8: SUNFLOWER DENSITY AS A CIRCUIT LOWER BOUND ENGINE
+
+**Hypothesis:** The Alweiss et al. improvements to the Sunflower Lemma can be applied to the structural sets generated by the Method of Approximations (Razborov), proving that any polynomial-size non-monotone circuit attempting to compute the Clique function must produce a dense "sunflower" of errors that forces the circuit to output false positives on negative instances.
+
+**Inspiration:** The recent breakthrough in extremal combinatorics bounding the size of sunflower-free sets, combined with Razborov's historic (but stalled) Method of Approximations.
+
+**Avoids relativization:** The Method of Approximations is a purely combinatorial technique based on set-theoretic lattices, which is well-known to be non-relativizing.
+
+**Avoids natural proofs:** Sunflowers represent highly structured, extremal intersections of sets. Random functions do not contain massive, coherent sunflowers in their error sets, violating the "Largeness" condition.
+
+**Avoids algebrization:** The Sunflower Lemma is a theorem of pure set theory and extremal combinatorics; it involves no polynomials, rings, or fields.
+
+**First concrete step:** Prove that any non-monotone AND-OR formula of depth 3 computing the Clique indicator function must contain a sunflower of size $k$ in its set of accepted minterms.
+
+**Cross-domain source:** Extremal Combinatorics.
+
+**Risk level:** medium
+
+**Why unexplored:** The database shows 0 papers on Extremal Combinatorics. The complexity community largely abandoned the Method of Approximations in the 1990s due to the Natural Proofs barrier, but modern, tighter extremal bounds (like the new Sunflower lemma) can target specific, non-random error structures.
+
+---
+
+### H9: HOLOGRAPHIC ASYMMETRY OF PLANAR MATCHGATES
+
+**Hypothesis:** Using holographic algorithms, we can prove that functions in P can be mapped to symmetric planar matchgate signatures (computable via Pfaffians), while NP-complete functions possess a fundamental topological asymmetry that strictly prohibits any polynomial-size planar matchgate embedding.
+
+**Inspiration:** Valiant's Holographic Algorithms, which use quantum-like interference in classical planar graphs to solve seemingly hard problems in polynomial time via the FKT algorithm.
+
+**Avoids relativization:** Matchgates rely on the topological planarity of graphs and the specific matrix mechanics of Pfaffians, which do not relativize.
+
+**Avoids natural proofs:** Planar matchgate signatures are extraordinarily fragile. A random Boolean function has absolutely no holographic matchgate signature, meaning this property is virtually non-existent in the wild.
+
+**Avoids algebrization:** Pfaffians of skew-symmetric matrices rely on exact topological cancellations (signs of permutations based on planar embeddings), which are destroyed when replaced by generic low-degree algebraic oracles.
+
+**First concrete step:** Prove that the 3-SAT Boolean function cannot be realized by any signature in the symmetric matchgate basis, regardless of the size of the underlying planar graph.
+
+**Cross-domain source:** Condensed Matter Physics (Fisher-Kasteleyn-Temperley algorithm) / Knot Theory.
+
+**Risk level:** high
+
+**Why unexplored:** Holographic algorithms are viewed as an algorithmic curiosity for #P problems. Their potential as a structural lower-bound technique for decision problems (P vs NP) via topological asymmetry has been completely ignored.
+
+---
+
+### H10: BIOLOGICAL ATTRACTOR BASINS OF BOOLEAN SIMULATIONS
+
+**Hypothesis:** By embedding Boolean circuits into continuous, non-linear Hopfield networks, we can prove that the "basin of attraction" for the correct output of an NP-complete function shrinks exponentially as input size grows, proving that no polynomial-size network can robustly compute NP-hard problems under arbitrary infinitesimal noise.
+
+**Inspiration:** Theoretical neuroscience and Hopfield networks, where memory capacity is strictly bounded by the geometric volume of attractor basins in a continuous energy landscape.
+
+**Avoids relativization:** The model relies on continuous energy gradients and Lyapunov functions, not discrete Turing machines or black-box oracles.
+
+**Avoids natural proofs:** The existence of deep, stable attractor basins is a property of highly structured, symmetric connection matrices. Random connection weights yield chaotic spin-glass landscapes with no stable basins (violating "Largeness").
+
+**Avoids algebrization:** Attractor dynamics involve exponential decay, sigmoid activation functions, and real-valued energy gradients, which cannot be represented as polynomials over finite fields.
+
+**First concrete step:** Define a continuous Lyapunov function for a generic polynomial-size circuit computing the Parity function, and calculate the exact volume of its basin of attraction in $\mathbb{R}^n$.
+
+**Cross-domain source:** Theoretical Biology / Non-linear Dynamical Systems.
+
+**Risk level:** moonshot
+
+**Why unexplored:** Core complexity theory relies entirely on discrete, error-free models of computation. Treating Boolean circuits as physical/biological systems subject to continuous thermodynamic stability criteria introduces a completely alien, physics-based metric to worst-case complexity.
